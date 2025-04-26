@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AENTERPRISE | Roblox Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+    <p class="preloader-text">Welcome to AENTERPRISE's Portfolio</p>
+  </div>
+
+  <div id="top"></div> <!-- Invisible anchor for Back to Top -->
+
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">AENTERPRISE</span></h1>
+      <p id="typing-text"></p> <!-- ✨ Typing animation here -->
+      <a href="https://discord.com/users/YOUR-DISCORD-ID" class="btn" target="_blank">Contact Me on Discord</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>Hey! I'm <span class="highlight">AENTERPRISE</span>, a passionate Roblox developer dedicated to bringing ideas to life through powerful scripting and smart solutions. 
+    Whether it's building complex systems, fixing game-breaking bugs, or optimizing gameplay for a smoother experience, I'm always ready to turn challenges into opportunities.
+    <br><br>
+    With every project, my goal is simple: create games that players love and remember. Let's build something amazing together!</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Lua-Logo.svg" alt="Lua Logo" class="skill-icon">
+        <p>Lua Scripting</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968249.png" alt="Roblox Studio Logo" class="skill-icon">
+        <p>Roblox Studio</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://img.icons8.com/ios-filled/50/bug.png" alt="Bug Fixing Icon" class="skill-icon">
+        <p>Bug Fixing</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://img.icons8.com/ios-filled/50/speed.png" alt="Optimization Icon" class="skill-icon">
+        <p>Game Optimization</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-list">
+
+      <!-- Project Cards -->
+      <div class="project-item hidden">
+        <h3>🗺️ Adventure Quest System</h3>
+        <p>Designed a modular quest system with saving and progress tracking features.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🏗️ Tycoon Resource Manager</h3>
+        <p>Developed backend Lua scripts to manage resources, upgrades, and player earnings.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🎯 Battle Royale Map Fix</h3>
+        <p>Optimized map loading times and fixed zone shrinking bugs in a popular BR game.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>💾 Simulator Auto-Save System</h3>
+        <p>Implemented an auto-save feature for simulator games using Roblox DataStore services.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🏎️ Racing Game Leaderboards</h3>
+        <p>Built dynamic live leaderboards displaying top players' race times and wins.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🧱 Obby Difficulty Adjustments</h3>
+        <p>Balanced obstacle difficulty across levels and scripted dynamic checkpoints.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🐾 Pet Collection System</h3>
+        <p>Created an inventory and hatching system for collectible pets with random rarities.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🛠️ Bug Fixes for RP Game</h3>
+        <p>Fixed character animations, vehicle spawn errors, and interaction bugs in a roleplay game.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>🖥️ Custom GUI Design</h3>
+        <p>Developed sleek, user-friendly custom GUIs for inventory, settings, and shop systems.</p>
+      </div>
+
+      <div class="project-item hidden">
+        <h3>⚔️ Event-Based Combat System</h3>
+        <p>Scripted event-driven combat mechanics with skills, cooldowns, and hit detection.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 AENTERPRISE | Roblox Developer Portfolio</p>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#top" class="back-to-top hidden-top">↑</a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('particles.js loaded');
+    });
+  </script>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const typingTexts = [
+      "Roblox Developer",
+      "Bug Fixer",
+      "Game Scripter",
+      "Optimization Specialist"
+    ];
+
+    let textIndex = 0;
+    let charIndex = 0;
+    const typingSpeed = 100;
+    const erasingSpeed = 60;
+    const delayBetween = 1500;
+    const typingTextElement = document.getElementById('typing-text');
+
+    function type() {
+      if (charIndex < typingTexts[textIndex].length) {
+        typingTextElement.textContent += typingTexts[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(erase, delayBetween);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typingTextElement.textContent = typingTexts[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingSpeed);
+      } else {
+        textIndex++;
+        if (textIndex >= typingTexts.length) textIndex = 0;
+        setTimeout(type, typingSpeed);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typingTexts.length) setTimeout(type, delayBetween);
+    });
+  </script>
+
+  <!-- Scroll Reveal Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+
+  <!-- Back to Top Visibility Script -->
+  <script>
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopButton.classList.remove('hidden-top');
+      } else {
+        backToTopButton.classList.add('hidden-top');
+      }
+    });
+  </script>
+
+  <!-- Preloader Script -->
+  <script>
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+      }, 2000); // 2 second minimum
+    });
+  </script>
+
+</body>
+</html>
